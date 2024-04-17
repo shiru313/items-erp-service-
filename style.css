@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    
+}
+h4{
+   font-family: "Lucida Console", "Courier New", monospace;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
+    padding: 20px 0; /* Adjusted padding */
+    text-align: center;
+    z-index: 2; /* Ensure header appears above video background */
+}
+
+        header img {
+            max-width: 140px;
+            height: auto;
+            margin-top: 0px; /* Adjust margin as needed */
+            margin-bottom: 0px;
+
+        }
+#videoContainer {
+    width: 300px;
+    height: 150px;
+    margin: 20px auto;
+    border: 2px solid #0002;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#result{
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: myFirstFont;
+  src: url(sansation_bold.woff);
+  font-weight: bold;
+  color: #EFE000;
+}
+
+#rbox {
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #0009;
+    border-radius: 30px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+  
+}
+
+.scanner-line {
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scannerAnimation 1s infinite alternate;
+}
+
+@keyframes scannerAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(150px);
+    }
+}
+
+
+
+
+
+
+/* CSS */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;"
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 20px,rgba(44,187,180,.25) 0 10px 20px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.15) rotate(-1deg);
+}
+
+
+
+#videoBackground {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white; /* Text color */
+    text-align: center;
+    padding-top: 1px; 
+}
+
+

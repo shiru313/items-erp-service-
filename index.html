@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcode Scanner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo2.png" alt="Your Shop Logo">
+    <!-- Animated Text -->
+    
+
+    
+
+    <!-- End Animated Text -->
+</header>
+
+<div id="videoBackground">
+    <video id="bgVideo" playsinline autoplay loop muted>
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Barcode Scanner</h1>
+          <h4 id="scanMessage">scan any product</h4>
+       
+        <div id="videoContainer">
+            <video id="video" playsinline autoplay></video>
+            <div class="scanner-line"></div>
+        </div>
+        <div  class="button-3" id="rbox">
+            <div id="result"></div>
+            
+        </div>
+        <div>
+            <div class="button">
+                <button type="reset" class="button-33" id="refreshButton">Refresh</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+<script src="script.js"></script>
+<script>
+  setInterval(function() {
+        var scanMessage = document.getElementById("scanMessage");
+        scanMessage.textContent = scanMessage.textContent === "Click logo to get offers" ? "scan any product" : "Click logo to get offers";
+    }, 6000);
+</script>
+</body>
+</html>
